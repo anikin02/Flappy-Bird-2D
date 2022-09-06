@@ -8,21 +8,34 @@ public class Bird : MonoBehaviour
     [SerializeField] private AudioSource soundOfGettingPoint;
     [SerializeField] private AudioSource soundOfWing;
 
-
     private BirdMover mover;
+
+    public int Record;
     private int score;
 
     public event UnityAction GameOver;
     public event UnityAction<int> ScoreChanged;
+    public event UnityAction<int> RecordChanged;
 
     private void Start()
     {
         mover = GetComponent<BirdMover>();
+        RecordChanged(Record);
+    }
+
+    private void NewRecord()
+    {
+        if (score > Record)
+        {
+            Record = score;
+            RecordChanged(Record);
+        }
     }
 
     public void AddScore()
     {
         score++;
+        NewRecord();
         soundOfGettingPoint.Play();
         ScoreChanged(score);
     }
