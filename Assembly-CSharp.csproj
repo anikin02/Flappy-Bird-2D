@@ -37,20 +37,20 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\Record.cs" />
+     <Compile Include="Assets\Scripts\saveGame.cs" />
      <Compile Include="Assets\Scripts\BirdTracker.cs" />
      <Compile Include="Assets\Scripts\Bird.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
      <Compile Include="Assets\Scripts\EndGame.cs" />
      <Compile Include="Assets\Scripts\PipeSpawner.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
+     <Compile Include="Assets\Scripts\ChangeofDayAndNight.cs" />
      <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\BirdCollision.cs" />
      <Compile Include="Assets\Scripts\ScoreZone.cs" />
      <Compile Include="Assets\Scripts\BirdMover.cs" />
      <Compile Include="Assets\Scripts\Screen.cs" />
-     <Compile Include="Assets\Scripts\Record.cs" />
-     <Compile Include="Assets\Scripts\ChangeofDayAndNight.cs" />
-     <Compile Include="Assets\Scripts\saveGame.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.29f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

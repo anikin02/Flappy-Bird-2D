@@ -25,4 +25,4 @@ If you die, you will see this screen.
 
 ### You can download the game from this link.
 
-*link*
+*[link](https://anikin02.itch.io/flappy-bird-2d)*

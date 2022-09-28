@@ -10,9 +10,11 @@ public class PipeSpawner : ObjectPool
     [SerializeField] private float minSpawnPositionY;
 
     private float elapsedTime = 0;
+    private float standartSecondBetweenSpawn;
 
     private void Start()
-    {
+    {   
+        standartSecondBetweenSpawn = secondBetweenSpawn;
         Initialize(template);
     }
 
@@ -34,5 +36,18 @@ public class PipeSpawner : ObjectPool
                 DisableObjectAbroadScreen();
             }
         }
+    }
+
+    public void HardGame()
+    {
+        if (secondBetweenSpawn > 0.5f)
+        {
+            secondBetweenSpawn -= 0.2f;
+        }
+    }
+
+    public void ResetSpawner()
+    {
+        secondBetweenSpawn = standartSecondBetweenSpawn;
     }
 }

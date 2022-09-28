@@ -8,6 +8,11 @@ public class Bird : MonoBehaviour
     [SerializeField] private AudioSource soundOfGettingPoint;
     [SerializeField] private AudioSource soundOfWing;
 
+    [SerializeField] private Sprite FirstBird;
+    [SerializeField] private Sprite SecondBird;
+
+    [SerializeField] private PipeSpawner spawner;
+
     private BirdMover mover;
 
     public int Record;
@@ -32,18 +37,40 @@ public class Bird : MonoBehaviour
         }
     }
 
+    private void ChangeDificult()
+    {   
+        if (score == 0)
+        {
+            GetComponent<SpriteRenderer>().sprite = FirstBird;
+        }
+        if (score % 15 == 0)
+        {
+            mover.HardGame();
+            spawner.HardGame();
+            
+            if (score / 30 == 1)
+            {
+                GetComponent<SpriteRenderer>().sprite = SecondBird;
+            }
+        }
+    }
+
     public void AddScore()
     {
         score++;
-        NewRecord();
         soundOfGettingPoint.Play();
+        NewRecord();
         ScoreChanged(score);
+        ChangeDificult();
+        
     }
 
     public void ResetPlayer()
     {
         score = 0;
+        ChangeDificult();
         ScoreChanged(score);
+        spawner.ResetSpawner();
         mover.ResetBird();
     }
 

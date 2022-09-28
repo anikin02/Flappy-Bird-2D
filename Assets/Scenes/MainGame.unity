@@ -1579,6 +1579,9 @@ MonoBehaviour:
   soundOfDeath: {fileID: 1311668233}
   soundOfGettingPoint: {fileID: 723558739}
   soundOfWing: {fileID: 849398085}
+  FirstBird: {fileID: 21300000, guid: c82235e8398caac48b3221abeff02816, type: 3}
+  SecondBird: {fileID: 21300000, guid: 62aa1c33e806b3c45904f5569f2b5b86, type: 3}
+  spawner: {fileID: 162589859}
   Record: 0
 --- !u!114 &1456192931
 MonoBehaviour:
